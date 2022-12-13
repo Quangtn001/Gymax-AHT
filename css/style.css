@@ -8657,72 +8657,70 @@ img {
   text-align: center;
   margin-top: 36px;
   color: #fff;
+  position: relative;
 }
-.main-content .footer .logo img {
+.main-content .footer .footer-logo img {
   margin-top: 100px;
   width: 200px;
 }
-.main-content .footer .slogan-content {
+.main-content .footer .footer-desc {
   margin-top: 32px;
   font-size: 14px;
   display: flex;
   justify-content: center;
 }
-.main-content .footer .slogan-content p {
+.main-content .footer .footer-desc p {
   color: #909090;
   padding: 0 202px;
   font-size: 14px;
   line-height: 1.6;
   width: 60%;
 }
-.main-content .footer .socials {
+.main-content .footer .social-link {
   font-size: 16px;
   margin-top: 40px;
 }
-.main-content .footer .socials .social-item {
+.main-content .footer .social-link .social-item {
   color: #fff;
 }
-.main-content .footer .socials .social-item:hover {
+.main-content .footer .social-link .social-item:hover {
   color: #dd2f31;
 }
-.main-content .footer .socials i {
-  padding: 0 22px;
+.main-content .footer .social-link .social-item i {
+  padding: 0 23px;
 }
-.main-content .footer .contact {
-  border-top: 1px solid #ccc;
-  margin-top: 58px;
+.main-content .footer .footer-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 80px;
+  border-top: 1px solid #dedede;
 }
-.main-content .footer .contact-item {
-  text-align: left;
-  margin-top: 75px;
+.main-content .footer .footer-info .contact-list {
+  margin-top: 50px;
 }
-.main-content .footer .contact-item .title {
+.main-content .footer .footer-info .contact-list-item:first-child {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: -170px;
 }
-.main-content .footer .contact-item .contact-list {
-  margin-top: 40px;
-}
-.main-content .footer .contact-item .contact-list-item a {
+.main-content .footer .footer-info .contact-list-item a {
   display: flex;
   margin-top: 24px;
   font-size: 16px;
   color: #909090;
 }
-.main-content .footer .contact-item .contact-list-item a:hover {
-  color: #dd2f31;
-  cursor: pointer;
-}
-.main-content .footer .contact-item .contact-list-item a i {
+.main-content .footer .footer-info .contact-list-item a i {
   padding-right: 20px;
 }
-.main-content .footer .contact-item .contact-list-item a p {
+.main-content .footer .footer-info .contact-list-item a p {
   font-size: 14px;
 }
 .main-content .footer .copyrights {
   margin-top: 50px;
   padding: 16px 0;
   font-size: 14px;
+  background-color: #121010;
 }
 @media (max-width: 1200px) {
   .header-logo img {

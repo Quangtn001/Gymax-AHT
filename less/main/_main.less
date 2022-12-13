@@ -382,15 +382,14 @@
         text-align: center;
         margin-top: 36px;
         color: #fff;
-    
-        .logo {
+        position: relative;
+        .footer-logo {
           img {
             margin-top: 100px;
             width: 200px;
           }
         }
-    
-        .slogan-content {
+        .footer-desc{
           margin-top: 32px;
           font-size: 14px;
           display: flex;
@@ -403,67 +402,55 @@
             width: 60%;
           }
         }
-    
-        .socials {
+
+        .social-link{
           font-size: 16px;
           margin-top: 40px;
-    
           .social-item {
             color: #fff;
             &:hover {
               color: @primary-color;
             }
-          }
-    
-          i {
-            padding: 0 22px;
+            i {
+              padding: 0 23px;
+            }
           }
         }
-    
-        .contact {
-          border-top: 1px solid #ccc;
-          margin-top: 58px;
-    
-          &-item {
-            text-align: left;
-            margin-top: 75px;
-    
-            .title {
-              font-size: 18px;
-              font-weight: 600;
+
+        .footer-info{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 80px;
+            border-top: 1px solid #dedede;
+            .contact-list{
+              margin-top: 50px;
             }
-    
-            .contact-list {
-              margin-top: 40px;
-    
-              &-item a {
+            .contact-list-item{
+              &:first-child{
+                font-size: 18px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-left: -170px;
+              }
+              a{
                 display: flex;
                 margin-top: 24px;
                 font-size: 16px;
                 color: @text-color;
-    
-                &:hover {
-                  color: @primary-color;
-                  cursor: pointer;
-                }
-    
-                i {
+                i{
                   padding-right: 20px;
                 }
-    
-                p {
+                p{
                   font-size: 14px;
                 }
               }
             }
-          }
         }
-    
         .copyrights {
           margin-top: 50px;
           padding: 16px 0;
           font-size: 14px;
+          background-color: rgb(18, 16, 16);
         }
       }
-
 }
