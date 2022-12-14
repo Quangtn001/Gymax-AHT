@@ -11,7 +11,7 @@
     .modal-container {
       width: 300px;
       height: 100vh;
-      background: rgb(94, 94, 94);
+      background: #E8C4C4;
     }
   
     .modal-menu {
@@ -27,11 +27,10 @@
   
       a {
         color: #fff;
-      }
-  
-      &:hover {
-        cursor: pointer;
-        background: @primary-color;
+        &:hover {
+          cursor: pointer;
+          color: @primary-color;
+        }
       }
     }
     .modal-close {
@@ -243,25 +242,38 @@
                 position: relative;
                 cursor: pointer;
               }
+              .active {
+                color: @primary-color;
+          
+                &::before {
+                  content: "";
+                  border-bottom: 2px solid @primary-color;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                }
+              }
         }
-        .active {
-            color: @primary-color;
-      
-            &::before {
-              content: "";
-              border-bottom: 2px solid @primary-color;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              right: 0;
-            }
-          }
     }
+    .top-seller,.featured,.most-review{
+      opacity: 0;
+      transition: 0.5s;
+      height: 0px;
+      
+    }
+    .top-seller.selected,.featured.selected,.most-review.selected{
+      opacity: 1;
+      height: auto;
+  }
     .home-products{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-gap: 20px;
         margin-top: 32px;
+        .selected{
+          display: none;
+        }
         .product-item{
             position: relative;
             &:hover{
@@ -404,6 +416,7 @@
         .footer-info{
             display: grid;
             grid-template-columns: repeat(4,1fr);
+            grid-column-gap: 25px;
             margin-top: 80px;
             border-top: 1px solid #dedede;
             .contact-list{

@@ -1,28 +1,31 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
-$$(".listing-item").forEach((item) => {
-    item.onclick = (e) => {
-        e.preventDefault();
-        $$(".listing-item").forEach((item) =>
-            item.classList.remove("active")
-        );
-        item.classList.add("active");
-    };
+$(document).ready(function() {
+
+    $("#tab-bar .listing-item").click(function() {
+        $("#tab-bar .listing-item.active").removeClass("active")
+        $(this).addClass("active")
+        var active = $("#tab-bar .listing-item.active").attr('data')
+        switch (active) {
+            case '1':
+                $(".list .selected").removeClass('selected')
+                $(".list .top-seller").addClass('selected')
+                break;
+            case '2':
+                $(".list .selected").removeClass('selected')
+                $(".list .featured").addClass('selected')
+                break;
+            case '3':
+                $(".list .selected").removeClass('selected')
+                $(".list .most-review").addClass('selected')
+                break;
+        }
+    });
+
+    const modalContainer = $(".modal-container");
+
+    $(".mobile-icon").click(function() {
+        $(".modal-nav").css("display", "block");
+    });
+    $(".modal-close").click(function() {
+        $(".modal-nav").css("display", "none");
+    });
 });
-
-function showModalMenu() {
-    $(".modal-nav").style.display = "block";
-}
-
-function hideModalMenu() {
-    $(".modal-nav").style.display = "none";
-}
-
-const modalNav = $(".modal-nav");
-const modalContainer = $(".modal-container");
-
-$(".mobile-icon").onclick = showModalMenu;
-
-modalContainer.onclick = (e) => e.stopPropagation();
-modalNav.onclick = hideModalMenu;
-$(".modal-close").onclick = hideModalMenu;
