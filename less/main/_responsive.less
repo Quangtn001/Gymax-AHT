@@ -1,4 +1,4 @@
-@media (max-width: 1200px){
+@media (max-width: 1280px){
     .header-logo {
         img {
           width: 160px;
@@ -8,7 +8,7 @@
     .main-content{
         .hero-content {
             bottom: 100px;
-            left: 15px;
+            left: 70px;
             .title {
                 font-size: 40px;
                 margin-bottom: 30px;
@@ -198,11 +198,14 @@
         }
       }
       &-action{
-        i{
+        margin-right: 55px;
+        .icon{
+            i{
             font-size: 14px;
             padding: 6px 8px;
             &::after{
                 display: none;
+                }
             }
         }
       }
@@ -290,7 +293,17 @@
             }
         }
     }
-    
 }
-  
+}
+@media (max-width: 320px){
+    .header{
+        &-action{
+            margin-right: 50px;
+            .icon{
+                i{
+                    padding: 0;
+                }
+            }
+        }
+    }
 }
